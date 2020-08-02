@@ -1,0 +1,111 @@
+/* Importing the necessary fonts */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+div.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1,
+p {
+    text-align: center;
+    font-family: "Black Ops One", cursive;
+}
+
+h1 {
+    font-size: 14vw;
+    color: white;
+    text-shadow: 1.042vw 0.694vw 2.5rem rgba(19, 18, 43, 0.55);
+}
+
+p {
+    font-size: 12vw;
+    color: #13122b;
+    padding-bottom: 10px;
+    text-shadow: 1vw 0.5vw 2rem rgba(19, 18, 43, 0.15);
+}
+
+.buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.buttons a {
+    font-family: "Black Ops One", cursive;
+    font-size: 2.667vw;
+    text-decoration: none;
+    border: 3px solid #13122b;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: transform 50ms ease-in;
+}
+
+.buttons a:nth-child(odd) {
+    color: white;
+    background-color: #13122b;
+}
+
+.buttons a:nth-child(2) {
+    color: #13122b;
+}
+
+.buttons a:hover {
+    transform: scale(1.05);
+    transition: transform 50ms ease-in, color 50ms ease-in;
+    color: #53ecc5;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 20vw;
+    }
+
+    p {
+        font-size: 19vw;
+    }
+
+    .buttons {
+        width: 90%;
+    }
+
+    .buttons a {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        height: 53vw;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    p {
+        font-size: 30vw;
+    }
+
+    .buttons a {
+        font-size: 7vw;
+    }
+}
