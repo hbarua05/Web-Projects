@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+.container {
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.main-content {
+    width: 40%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 3.2vw;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.open-modal {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background: #628281;
+    border: 1px solid #43655a;
+    border-radius: 5px;
+    transition: background-color 100ms ease-in-out;
+}
+
+.open-modal:hover {
+    background-color: #335857;
+    transition: background-color 100ms ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(34, 14, 14, 0.89);
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: peachpuff;
+    border-radius: 10px;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.exit {
+    float: right;
+    font-size: 40px;
+    font-weight: 900;
+    color: grey;
+}
+
+.exit:hover {
+    color: black;
+    cursor: pointer;
+}
+.content {
+    clear: both;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        width: 70%;
+        padding: 40px;
+    }
+    .title {
+        font-size: 5vw;
+        margin-bottom: 40px;
+    }
+
+    .open-modal {
+        font-size: 30px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 70%;
+    }
+}
