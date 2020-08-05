@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .user-image {
+                width: 50px;
+                height: 50px;
+            }
+            .users {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .user {
+                background-color: coral;
+                display: flex;
+                align-items: center;
+                margin: 5px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #214875;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #23609f;
+            }
+
+            .description {
+                text-align: center;
+            }
+
+            .description p {
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            .description button {
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="description">
+            <p>See some of the Github Users</p>
+            <button>Click me</button>
+        </div>
+        <div class="users"></div>
+        <script>
+            document
+                .querySelector("button")
+                .addEventListener("click", loadUsers);
+
+            function loadUsers() {
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://api.github.com/users", true);
+                xhr.onload = function () {
+                    if ((this.status = 200)) {
+                        let response = JSON.parse(this.responseText);
+                        let output = "";
+                        for (let user of response) {
+                            output += `
+                                <div class="user">
+                                    <img class="user-image" src=${user.avatar_url}>
+                                    <ul>
+                                        <li>ID: ${user.id}</li>
+                                        <li>Name: ${user.login}</li>
+                                        <li>User URL: <a href=${user.html_url} target="_blank">${user.html_url}</a></li>
+                                    </ul>
+                                </div>`;
+                        }
+                        document.querySelector(".users").innerHTML = output;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+    </body>
+</html>
