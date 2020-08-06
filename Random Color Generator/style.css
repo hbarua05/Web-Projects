@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Righteous&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: white;
+    font-size: 30px;
+    font-family: "Righteous", cursive;
+    letter-spacing: 5px;
+}
+
+p.color {
+    margin-left: 10px;
+    font-size: 40px;
+}
+.colorName {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 30px;
+}
+a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 60px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-family: "Fredoka One", cursive;
+    font-size: 30px;
+    border: 5px solid black;
+    border-radius: 20px;
+    transition: transform 100ms ease-in-out;
+}
+
+a:hover {
+    transform: translate(-50%) scale(1.1);
+    transition: transform 100ms ease-in-out;
+}
