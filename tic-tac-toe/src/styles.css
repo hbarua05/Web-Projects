@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Sriracha&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(20deg, #d15a7c, #ee8972);
+}
+.board {
+    width: 70%;
+    margin: 12vh auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square,
+.square:focus {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #35092d;
+    background-color: #621055;
+}
+
+.square:hover {
+    background-color: #410b38;
+}
+
+.square p {
+    font-size: 4rem;
+    font-family: "Sriracha", cursive;
+    color: white;
+}
+
+.status {
+    color: #4f4393;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.reset {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #4f4393;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #4f4393;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.reset:hover {
+    background-color: #4f4393;
+    color: white;
+    cursor: pointer;
+}
