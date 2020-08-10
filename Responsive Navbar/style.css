@@ -1,0 +1,107 @@
+/* Importing the necessary fonts from Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; /* 10px if 16px is the default user font-size*/
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(music.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+header {
+    background-color: #060414;
+    color: white;
+    padding: 1rem 10rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+ul li a {
+    margin: 0 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #00c6c4;
+}
+img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none; /* Not displaying the hamburger when width > 1000px*/
+}
+
+img:hover {
+    -webkit-filter: invert(54%) sepia(82%) saturate(1571%) hue-rotate(138deg)
+        brightness(97%) contrast(101%);
+    filter: invert(54%) sepia(82%) saturate(1571%) hue-rotate(138deg)
+        brightness(97%) contrast(101%);
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 1rem 10vw;
+    }
+
+    nav p {
+        font-size: 2.5rem;
+    }
+    ul {
+        background-color: #292944;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 66px; /*Move the hamburger links below the header*/
+        left: -100%; /*Moving the hamburger links out of page when width > 1000px*/
+        transition: left 300ms ease-in-out;
+        width: 100vw;
+        height: calc(100vh - 6.6rem); /* 6.6rem is the size of the header*/
+        font-family: "Piedra", cursive;
+        font-size: 3.4rem;
+    }
+
+    ul li:nth-child(1) {
+        font-size: 4.8rem;
+    }
+
+    /* Setting the initial opacity and size */
+    ul li {
+        opacity: 0.1;
+        transform: scale(0.1);
+        transition: "opacity 600ms ease-in, transform 300ms ease-in-out";
+    }
+    img {
+        display: block;
+    }
+}
