@@ -22,7 +22,7 @@ function alertError() {
 }
 
 function getHourlyWeather(lat, lon) {
-    const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=674d13d1e2dffb08a8f5829bf90d68d0`;
+    const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid={OpenWeatherMapAPIKey}`;
 
     fetch(URL)
         .then((response) => response.json())
