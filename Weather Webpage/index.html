@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>MyWeather</title>
+    </head>
+    <body>
+        <!-- basic -->
+        <header>
+            <nav>
+                <img src="img/logo.png" alt="MyWeather Logo" />
+                <p>MyWeather</p>
+            </nav>
+        </header>
+        <div class="tabs">
+            <a class="active" href="index.html">Now</a>
+            <a href="hourly.html">Hourly</a>
+            <a href="daily.html">Daily</a>
+        </div>
+        <div class="timezone">
+            <span>Timezone:</span>
+            <span id="timezone">--------</span>
+        </div>
+        <!-- basic End -->
+        <section class="first">
+            <div class="current">
+                <p>Current Weather</p>
+                <p id="time">--------</p>
+                <div class="container">
+                    <img
+                        class="icon"
+                        src="img/icons/unknown.png"
+                        alt="Unknown"
+                    />
+                    <div class="info">
+                        <p id="temp">--------</p>
+                        <span id="feel">--------</span>
+                        <p id="description">--------</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <h1>More</h1>
+                <ul>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                    <li>----------------------------------------</li>
+                </ul>
+            </div>
+        </section>
+        <section class="second">
+            <div class="sunrise">
+                <h1>SUNRISE</h1>
+                <img src="img/icons/01d.png" alt="Sunrise" />
+                <p>--------</p>
+            </div>
+            <div class="sunset">
+                <h1>SUNSET</h1>
+                <img src="img/icons/sunset.png" alt="Sunset" />
+                <p>--------</p>
+            </div>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
